@@ -63,8 +63,11 @@ end
 
 hello_proc = lambda do |req, resp|
   resp['Content-Type'] = "text/html"
-  resp.body = %{
+  appDelegate = NSApplication.sharedApplication.delegate()
+  text = appDelegate.sampleText()
+    resp.body = %{
     <html><body>
+    #{text}
     Hello. You're calling from a #{req['User-Agent']}
     <p>
     I see parameters: #{req.query.keys.join(', ')}

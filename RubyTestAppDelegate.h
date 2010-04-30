@@ -12,6 +12,8 @@
     NSWindow *window;
 }
 
+- (NSString *) sampleText;
+
 @property (assign) IBOutlet NSWindow *window;
 
 @end

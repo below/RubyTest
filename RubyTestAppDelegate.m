@@ -35,4 +35,8 @@
     [NSThread detachNewThreadSelector:@selector(startServer:) toTarget:self withObject:nil];
 }
 
+- (NSString *) sampleText {
+    return @"Hello, CocoaApp!\n";
+}
+
 @end
